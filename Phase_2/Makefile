@@ -6,7 +6,5 @@ lister: main.o print.o
 	rm *.o
 
 main.o: main.c common.h
-	gcc -c main.c
-
 print.o: print.c common.h
-	gcc -c print.c
+
