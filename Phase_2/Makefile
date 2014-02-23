@@ -2,7 +2,7 @@
 # File: Makefile
 
 lister: main.o print.o
-	gcc hello.o print.o -o hello
+	gcc main.o print.o -o lister
 	rm *.o
 
 main.o: main.c common.h
