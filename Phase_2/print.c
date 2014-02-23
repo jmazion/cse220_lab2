@@ -25,7 +25,7 @@ void print_line(char line[], char source_name_to_print[], char date_to_print[])
         save_chp = (line + MAX_PRINT_LINE_LENGTH);//adds 65 to adress pointer
 		strncpy(max_line, line, MAX_PRINT_LINE_LENGTH);
 		max_line[MAX_PRINT_LINE_LENGTH-1] = '\0';  
-		printf("\n%s",max_line);
+		printf("%s",max_line);
 		puts(save_chp)
     }
     else
