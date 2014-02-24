@@ -26,7 +26,7 @@ void print_line(char line[], char source_name_to_print[], char date_to_print[])
 		strncpy(max_line, line, MAX_PRINT_LINE_LENGTH);
 		max_line[MAX_PRINT_LINE_LENGTH-1] = '\0';  
 		printf("%s",max_line);
-		puts(save_chp)
+		puts(save_chp);
     }
     else
     {                            

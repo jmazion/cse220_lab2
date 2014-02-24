@@ -12,7 +12,7 @@ int main (int argc, const char *argv[])
 	source_file = init_lister(argv[1]);// point to file in question
 	if (source_file != 0)
 	{
-	   	strncopy(source_name,argv[1]); // Get file name
+	   	strcpy(source_name, argv[1]); // Get file name
 	
 		do
 		{
