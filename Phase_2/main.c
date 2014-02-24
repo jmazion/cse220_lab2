@@ -1,5 +1,5 @@
 #include "common.h"
-
+//Daniel Martin and Joshua Mazion
 int main (int argc, const char *argv[])
 {
 	//Variables    

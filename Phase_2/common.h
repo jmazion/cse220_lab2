@@ -1,6 +1,6 @@
 #ifndef CSE220_project2_common_h
 #define CSE220_project2_common_h
-
+//Daniel Martin and Joshua Mazion
 // System header files to include
 #include <stdio.h>
 #include <sys/types.h>

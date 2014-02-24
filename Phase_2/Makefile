@@ -1,5 +1,6 @@
 #!/bin/bash
 # File: Makefile
+# Daniel Martin and Joshua Mazion
 
 lister: main.o print.o
 	gcc main.o print.o -o lister

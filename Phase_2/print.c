@@ -1,4 +1,5 @@
 #include "common.h"
+// Daniel Martin and Joshua Mazion
 
 static void print_page_header(char source_name[], char date[])// Declared first, since it is static
 {    
