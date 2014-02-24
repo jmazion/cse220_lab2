@@ -17,8 +17,8 @@ typedef enum {
     FALSE, TRUE,
 }BOOLEAN;
 
-FILE *init_lister(const char *, char source_file_name[], char dte[]);
-BOOLEAN get_source_line(FILE *, char src_name[], char todays_date[]);
-void print_line(char *, char source_name[], char date_to_print[]);
+FILE *init_lister(const char *name);
+BOOLEAN get_source_line(FILE *src_file, char src_name[], char todays_date[])
+void print_line(char line[], char source_name_to_print[], char date_to_print[])
 
 #endif

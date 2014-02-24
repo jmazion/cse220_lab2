@@ -2,19 +2,35 @@
 
 int main (int argc, const char *argv[])
 {
-    FILE *source_file;
+	//Variables    
+	FILE *source_file;
     char source_name[MAX_FILE_NAME_LENGTH];
     char date[DATE_STRING_LENGTH];
-    
-   /* Missing Code Here */
+    time_t timer;
+	BOOLEAN is_next_line = TRUE;
+
+	source_file = init_lister(argv[1]);// point to file in question
+	if (source_file != 0)
+	{
+	   	strncopy(source_name,argv[1]); // Get file name
+	
+		do
+		{
+			is_next_line = get_source_line(source_file, source_name, date);
+		}while(is_next_line == TRUE);
+
+		fclose(source_file);// Close the file
+	}
+	else
+	{
+		puts("\nInvalid filename.");
+	}
     return 0;
 }
-FILE *init_lister(const char *name, char source_file_name[], char dte[])
+FILE *init_lister(const char *name)
 {
-    time_t timer;
     FILE *file;
-    
-    /* Missing Code Here */
+    file = fopen(name, "r");
     return file;
 }
 BOOLEAN get_source_line(FILE *src_file, char src_name[], char todays_date[])
