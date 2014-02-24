@@ -3,8 +3,8 @@
 static void print_page_header(char source_name[], char date[])// Declared first, since it is static
 {    
 	static int page_number = 0; // Only initializes the first time function is called
-	printf("\nPage %d\t%s\t%s\n\n", page_number, source_name, date);// Prints header
 	++page_number;//Increase the page number
+	printf("\nPage %d\t%s\t%s\n", page_number, source_name, date);// Prints header
 }
 
 void print_line(char line[], char source_name_to_print[], char date_to_print[])
@@ -25,13 +25,12 @@ void print_line(char line[], char source_name_to_print[], char date_to_print[])
         save_chp = (line + MAX_PRINT_LINE_LENGTH);//adds 65 to adress pointer
 		strncpy(max_line, line, MAX_PRINT_LINE_LENGTH);
 		max_line[MAX_PRINT_LINE_LENGTH-1] = '\0';  
-		printf("%s",max_line);
-		puts(save_chp);
+		printf("%s",max_line);// Print desired length
+		printf("%s",save_chp);// Print rest of line
     }
     else
     {                            
-        *save_chp = save_ch;
-		puts(line);             
+		printf("%s",line); // Print the line            
     }
     
     ++line_count; // Another line printed

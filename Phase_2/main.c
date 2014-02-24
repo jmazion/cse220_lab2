@@ -8,6 +8,10 @@ int main (int argc, const char *argv[])
     char date[DATE_STRING_LENGTH];
     time_t timer;
 	BOOLEAN is_next_line = TRUE;
+	
+	// Get time and date
+  	timer = time(NULL);
+    strcpy(date,ctime(&timer));
 
 	source_file = init_lister(argv[1]);// point to file in question
 	if (source_file != 0)
@@ -38,10 +42,13 @@ BOOLEAN get_source_line(FILE *src_file, char src_name[], char todays_date[])
     char print_buffer[MAX_SOURCE_LINE_LENGTH + 9];
     char source_buffer[MAX_SOURCE_LINE_LENGTH];
     static int line_number = 0;
-    
-    if (1) //This is missing a condition
+
+    fgets(source_buffer, MAX_SOURCE_LINE_LENGTH, src_file); // Read a line from src_file
+	
+    if (fgets(source_buffer, MAX_SOURCE_LINE_LENGTH, src_file) != NULL)
     {
 		++line_number;
+		sprintf(print_buffer, "%d: %s", line_number, source_buffer);
 		print_line(print_buffer, src_name, todays_date);
         return (TRUE);
     }
